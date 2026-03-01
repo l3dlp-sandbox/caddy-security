@@ -66,6 +66,7 @@
 			crypto key sign-verify 01ee2688-36e4-47f9-8c06-d18483702520
 			enable identity store localdb
 			ui {
+				language fr
 				links {
 					"My Website" "https://go.myfiosgateway.com:8443/app/" icon "las la-star"
 					"My Identity" "/auth/whoami" icon "las la-user"

@@ -43,6 +43,11 @@ func parseCaddyfileAuthPortalUI(h *caddyfile.Dispenser, repl *caddy.Replacer, po
 				return h.Errf("%s %s subdirective has no value", rootDirective, subDirective)
 			}
 			portal.UI.Theme = h.Val()
+		case "language":
+			if !h.NextArg() {
+				return h.Errf("%s %s subdirective has no value", rootDirective, subDirective)
+			}
+			portal.UI.Language = h.Val()
 		case "logo":
 			hargs := util.FindReplaceAll(repl, h.RemainingArgs())
 			args := strings.Join(hargs, " ")
